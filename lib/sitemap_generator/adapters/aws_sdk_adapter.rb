@@ -46,7 +46,7 @@ module SitemapGenerator
       s3_object.upload_file(location.path, {
         acl: @acl,
         cache_control: @cache_control,
-        content_type: location[:compress] ? 'application/x-gzip' : 'application/xml'
+        content_type: location[:compress] ? 'application/gzip' : 'application/xml'
       }.compact)
     end
 
